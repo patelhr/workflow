@@ -19,6 +19,7 @@ jobs:
 
       # Runs the prod action
       - name: Run prod
+        run: ls
         env:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
