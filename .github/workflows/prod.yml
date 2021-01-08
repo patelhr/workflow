@@ -2,7 +2,7 @@ name: prod-workflow
 on: push
 jobs:
   prod-workflow:
-    name: Lint code base
+    name: Get machine
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
