@@ -23,3 +23,6 @@ jobs:
         
       - name: Publish project
         run: dotnet publish --no-build
+      
+      - name: check
+        run: ls
