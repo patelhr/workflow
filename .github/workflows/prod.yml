@@ -25,7 +25,5 @@ jobs:
         run: dotnet publish --no-build
       
       - name: check
-        run: cd /home/runner/work/workflow/workflow && ls
-         
-      - name: check3
-        run: ls
+        run: cd home && ls
+
