@@ -22,15 +22,15 @@ jobs:
         run: dotnet build
         
       - name: Publish project
-        run: dotnet publish
+        run: dotnet publish --configuration Release --output /home/runner/work/workflow/workflow/workflow/publish
       
       - name: check
-        run: cd /home/runner/work/workflow/workflow/workflow/obj && ls
+        run: cd /home/runner/work/workflow/workflow/workflow && ls
       
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2.2.2
         with: 
           name: prod
-          path: /home/runner/work/workflow/workflow/workflow/obj/Release
+          path: /home/runner/work/workflow/workflow/workflow/publish
         
     
