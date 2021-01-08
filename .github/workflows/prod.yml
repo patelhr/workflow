@@ -18,8 +18,8 @@ jobs:
         uses: actions/checkout@v2
 
       # Runs the prod action
-      - name: Run prod
-        run: dotnet build
-        env:
-          DEFAULT_BRANCH: main
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build project
+        run: dotnet rebuild
+        
+      - name: Publish project
+        run: dotnet publish
