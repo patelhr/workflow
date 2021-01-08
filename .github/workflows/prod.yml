@@ -7,6 +7,13 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+      - name: Cache
+        uses: actions/cache@v2
+        with:
+            path: ~/.nuget/packages
+            key: ${{ runner.os }}-nuget-${{ hashFiles('**/packages.lock.json') }}
+            restore-keys: |
+                      ${{ runner.os }}-nuget-
       - name: Build project
         run: dotnet build
       - name: Publish project
