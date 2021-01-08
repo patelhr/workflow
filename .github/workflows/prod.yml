@@ -25,7 +25,7 @@ jobs:
         run: dotnet publish --no-build
       
       - name: check
-        run: cd /home/runner/work/workflow/workflow/workflow && ls
+        run: cd /home/runner/work/workflow/workflow/workflow/obj && ls
       
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2.2.2
