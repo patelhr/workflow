@@ -25,5 +25,5 @@ jobs:
         run: dotnet publish --no-build
       
       - name: check
-        run: cd /home/runner/work && ls
+        run: cd /home/runner/work/workflow && ls
 
