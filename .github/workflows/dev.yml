@@ -8,11 +8,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Build project
-        run: dotnet build --configuration Release --output /home/runner/work/workflow/workflow/workflow/publish
+        run: dotnet build
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2.2.2
         with: 
-          name: prod
-          path: /home/runner/work/workflow/workflow/workflow/publish
+          name: dev
+          path: /home/runner/work/workflow/workflow/workflow/obj/Debug/netcoreapp3.1
         
     
