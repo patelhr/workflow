@@ -19,7 +19,7 @@ jobs:
 
       # Runs the prod action
       - name: Build project
-        run: dotnet rebuild
+        run: dotnet build
         
       - name: Publish project
-        run: dotnet publish
+        run: dotnet publish --nobuild
